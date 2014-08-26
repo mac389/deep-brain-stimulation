@@ -1,0 +1,18 @@
+{"settings":
+	{
+	"basal-ganglia": 
+		{
+			"params":{"duration":{"pattern":1000,"interpattern":100},"noise_level":0.1,"pattern":["background","gpi","stn"]},
+			"connections":"./data/basal-ganglia-connections.csv",
+			"area": {"0":"Cortex","1":"Striatum","2":"Gpi","3":"STN","4":"Gpe","5":"Thalamus"}
+		},
+	"pain":
+		{
+			"params":{"duration":{"pattern":1000,"interpattern":100},"noise_level":0.1,"pattern":["background","Nucleus accumbens"]},
+			"connections":"./data/basal-ganglia-connections.csv",
+			"area": {"0":"Spinal Cord","1":"Medulla","2":"Medullary reticular formation","3":"Pons",
+				"4":"Pontine reticular formation","5":"Central lateral nucleus","6":"VPL",
+				"7":"Nucleus accumbens","8":"MD","9":"Cortex"}
+		}
+	}
+}

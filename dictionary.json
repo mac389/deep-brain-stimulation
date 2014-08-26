@@ -1,0 +1,14 @@
+{"settings":
+	{
+	"basal-ganglia": 
+		{
+			"params":{"duration":{"pattern":1000,"interpattern":100},"noise_level":0.1,"pattern":["background","gpi","stn"]},
+			"connections":"basal-ganglia-connections.csv",
+			"area": {"0":"Cortex","1":"Striatum","2":"Gpi","3":"STN","4":"Gpe","5":"Thalamus"}
+		},
+
+
+
+
+	"pain":""}
+}
