@@ -44,6 +44,10 @@ def adjust_spines(ax,spines=['bottom','left']):
 	else:
 		ax.xaxis.set_ticks([])
 
+def simple_raster(spiketimes,ax,color='k'):
+	for neuron,times in spiketimes.iteritems():
+		ax.vlines(times,neuron+0.5,neuron+1.5,color=color)
+	
 def power_spectrum(data,Fs=20000, savename=None,show=True, cutoff=50):
 	p = Periodogram(data,sampling=Fs)
 	p.run()
