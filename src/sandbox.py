@@ -1,4 +1,4 @@
- import numpy as np
+import numpy as np
 
 import matplotlib.pyplot as plt
 import Graphics as artist
@@ -7,6 +7,14 @@ from matplotlib import mlab
 from numpy import random
 dt = 0.001
 H = lambda t: np.exp(-t) if t > 0 else -np.exp(-t) 
+
+'''
+	if t%int(tau_theta/dt)==0:
+		print 'here',int(t/tau_theta*dt)
+		theta[int(t/tau_theta*dt)] = dt/tau_theta + v[t]*v[t]-theta[int(t/tau_theta*dt)-1]
+	
+	if t%int(tau_w/dt)==0: 
+		w[int(t/tau_w*dt)] = dt/tau_w *v[t]*u[t]*(v[t]-theta[int(t/tau_w*dt)] if theta[int(t/tau_w*dt)] != 0 else theta[int(t/tau_w*dt)-1])'''
 
 #restrict kernel to surrounding 50 ms 
 def weight_change(pre,post,dt,t,kernel=H,window=50): #Assuming kernel is a lambda function
